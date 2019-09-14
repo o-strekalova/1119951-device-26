@@ -21,12 +21,12 @@
 
           <button class="show-hidden-categories">+</button>
           <ul class="hidden-categories-list">
-            <li class="hidden-category"><a herf="#">Виртуальная реальность</a></li>
-            <li class="hidden-category"><a herf="#">Моноподы для селфи</a></li>
-            <li class="hidden-category"><a herf="#">Экшн-камеры</a></li>
-            <li class="hidden-category"><a herf="#">Фитнес-браслеты</a></li>
-            <li class="hidden-category"><a herf="#">Умные часы</a></li>
-            <li class="hidden-category"><a herf="#">Квадрокоптеры</a></li>
+            <li class="hidden-category"><a href="#">Виртуальная реальность</a></li>
+            <li class="hidden-category"><a href="#">Моноподы для селфи</a></li>
+            <li class="hidden-category"><a href="#">Экшн-камеры</a></li>
+            <li class="hidden-category"><a href="#">Фитнес-браслеты</a></li>
+            <li class="hidden-category"><a href="#">Умные часы</a></li>
+            <li class="hidden-category"><a href="#">Квадрокоптеры</a></li>
           </ul>
           </section>
 
@@ -46,12 +46,12 @@
 
       <section class="slider">
           
-        <h2 class="hidden">Слайдер</h2>
+        <!--Слайдер-->
 
         <ul class="slider-list">
 
-        <li class="slide">
-        <img src="img/slider-1.png" width="384" height="486" alt="селфи-палка">
+        <li class="slide" id="slide-1">
+        <img src="img/slider-1.png" width="384" height="486" alt="селфи-палка" class="slider-image">
         <h3 class="slider-slogan">
           Делай селфи, как Бен Стилер!
         </h3>
@@ -77,8 +77,8 @@
         <a class="button" href="catalog-item.html">ПОДРОБНЕЕ</a>
         </li>
 
-        <li class="slide">
-        <img src="img/slider-2.png" width="345" height="485" alt="фитнес-браслет">
+        <li class="slide" id="slide-2">
+        <img src="img/slider-2.png" width="345" height="485" alt="фитнес-браслет" class="slider-image">
         <h3 class="slider-slogan">
           Худеем правильно!
         </h3>
@@ -97,8 +97,8 @@
         </li>
 
         
-        <li class="slide">
-        <img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер">
+        <li class="slide" id="slide-3">
+        <img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер" class="slider-image">
         <h3 class="slider-slogan">
           Порхает как бабочка, жалит как пчела!
         </h3>
@@ -122,14 +122,14 @@
         </ul>
 
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a></a></li>
-          <li class="pagination-item"><a href="#"></a></li>
-          <li class="pagination-item"><a href="#"></a></li>
+          <li class="pagination-item pagination-item-current"><a href="#"></a></li>
+          <li class="pagination-item"><a href="#slide-2"></a></li>
+          <li class="pagination-item"><a href="#slide-3"></a></li>
         </ul>
       </section>
 
       <section class="categories">
-          <h2 class="hidden">Категории товаров</h2>
+          <!--Категории товаров-->
           <ul class="categories-list">
             <li class="category-link">
               <a herf="#">
@@ -176,7 +176,7 @@
       </section>
 
       <section class="services">
-        <h2 class="hidden">Сервисы</h2>
+        <!--Сервисы-->
         <ul class="services-list">
           <li class="service delivery">
             <h3 class="service-button" id="#delivery">Доставка</h3>
@@ -203,7 +203,7 @@
       </section>
 
       <section class="logotypes">
-        <h2 class="hidden">Бренды</h2>
+        <!--Бренды-->
         <ul class="logotypes">
           <li class="logo">
             <img src="img/logo-1-rest.png" width="260" height="100" alt="логотип dji">
@@ -290,7 +290,7 @@
     </section>
 
     <section class='modal modal-contact-us'>
-        <h2 class="hidden">Личный кабинет</h2>
+        <!--Личный кабинет-->
         <!--Здесь будет форма
         Ваше имя: Имя Фамилия
         Ваш e-mail: email@example.com
