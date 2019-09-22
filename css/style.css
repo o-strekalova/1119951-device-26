@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Gilroy Extra Bold';
+    src: url('Gilroy-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Gilroy Light';
+    src: url('Gilroy-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }   
+
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    text-align: left;
+    color: #464646;
+
+    background-color: #ffffff;
+  }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  } 
+
+a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+ul {
+    list-style: none;
+ }
+
+.page-header {
+    background-color: rgba(240, 197, 46, 0.5);
+  }
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+    opacity: 0.6;
+}
+
+.main-header-logo:active {
+    opacity: 0.3;
+}
+
+input[type="search"] {
+    background: none;
+    border: none;
+    width: 356px;
+    height: 49px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.3);;
+}
+
+input[type="search"]:focus {
+    border-bottom: 2px solid #000000;
+}
+
+.search-button {
+  width: 85px;
+  height: 49px;
+  border: solid 2px #000000;
+  text-align: center;
+  color: #000000;
+  padding: 13px 21px;
+}
+
+.main-navigation a.search-button:hover,
+.main-navigation a.search-button:focus {
+    background: #000000;
+    color: #ffffff;
+}
+
+.main-navigation a.search-button:active {
+    background: #000000;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.header-site-navigation {
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+    color: #000000; 
+}
+
+.show-hidden-categories {
+    border: none;
+    background: none;
+}
+
+.hidden-categories-list {
+    line-height: 36px;
+    color: #000000; 
+}
+
+.header-user-options {
+    color: #000000;
+}
+
+.main-navigation a:hover,
+.header-user-options a:hover,
+.main-navigation a:focus,
+.header-user-options a:focus,
+input:hover::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.main-navigation a:active,
+.header-user-options a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input:focus::placeholder {
+    color: #000000;
+}
+
+h3 {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  color: #000000;
+}
+
+h3.slider-slogan {
+  line-height: 56px;
+}
+
+.slide-number {
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 179px;
+    font-weight: 800;
+    line-height: 179px;
+    letter-spacing: 1.79px;
+    text-align: right;
+    color: #ffffff;
+}
+
+.slider-text-big {
+  font-family: "Gilroy Light", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0.36px;
+  color: #000000;
+}
+
+.slider-text-small {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.13px;
+}
+
+.button {
+    width: 220px;
+    height: 40px;
+    background: linear-gradient(0deg, transparent 0px, transparent 18px, #f0c52e 18px,  #f0c52e 26px, transparent 26px, transparent 40px);
+    text-transform: uppercase;
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+    padding: 14px 43px 11px 44px;
+}
+
+.button:hover,
+.button:focus {
+    background: #f0c52e;
+}
+
+.button:active {
+    background: #f0c52e;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+figure.category-image {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(240, 197, 46, 0.5);
+    text-align: center;
+}
+
+figure.category-image img {
+    vertical-align: middle;
+}
+
+.category-link h4 {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  color: #000000;
+}
+
+li.category-link:active {
+   opacity: 0.3;
+}
+
+figure.category-image:hover,
+figure.category-image:focus,
+figure.category-image:active {
+    background-color: #f0c52e;
+}
+
+/** Не могу при active сделать отдельный цвет фона, но сохранить целостность элемента (h4 + img).
+Не понимаю, почему vertical-align для img внутри figure не срабатывает **/
+
+.services {
+    background: #e5e5e5;
+}
+
+.service-button {
+    width: 160px;
+    height: 40px;
+}
+
+.service-button:active {
+    width: 278px; /** Не сработало */
+    background: #000000;
+    color: #f7e184;
+}
+
+p.service-description {
+    letter-spacing: normal;
+}
+
+ul.delivery-companies{
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 40px;
+    color: #000000;
+    letter-spacing: normal;
+    list-style: circle;
+}
