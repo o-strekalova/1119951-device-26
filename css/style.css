@@ -47,6 +47,11 @@ ul {
     list-style: none;
  }
 
+button {
+  border: none;
+  background: none;
+}
+
 .page-header {
     background-color: rgba(240, 197, 46, 0.5);
   }
@@ -119,8 +124,8 @@ input[type="search"]:focus {
     color: #000000;
 }
 
-.header-logout-link a {
-  color: rgba(0, 0, 0, 0.3);
+.logout-link {
+  opacity: 0.3;
 }
 
 .main-navigation a:hover,
@@ -240,7 +245,7 @@ figure.category-image:active {
 }
 
 .service-button:active {
-    width: 278px; /** Не сработало */
+    width: 278px; /** Не сработало. Посмотреть еще раз */
     background: #000000;
     color: #f7e184;
 }
@@ -282,12 +287,13 @@ button.open-map {
 }
 
 .footer-site-navigation a {
-  font-family: "Gilroy extra Bold", sans-serif;
+  font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
   letter-spacing: 3.6px;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 a.social-button {
@@ -411,6 +417,20 @@ a.social-button:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filters,
+.sorting {
+  background: #ebebeb;
+}
+
 h2 {
   font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 16px;
@@ -421,5 +441,116 @@ h2 {
   text-transform: uppercase;
 }
 
+fieldset.filter {
+  border: none;
+  color: #000000;
+}
+
+.filter legend {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+.price-label {
+  font-family: "Gilroy Light", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2)
+}
+
+.filter-checkbox,
+.filter-radiobutton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+  color: #000000;
+}
 
 
+.filter-checkbox:disabled + label,
+.filter-radiobutton:disabled + label {
+  opacity: 25%;
+  color: #a6a6a6;
+} /*Не сработал. Проверить*/
+
+.sort-by {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-direction {
+  opacity: 0.2;
+}
+
+.sorting-direction:hover,
+.sorting-direction:focus {
+  opacity: 0.4;
+}
+
+.sorting-direction-current,
+.sorting-direction:active {
+ opacity: 1;
+}
+
+.sort-by:hover,
+.sort-by:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-by-current,
+.sort-by:active {
+ color:#000000;
+}
+
+h3.catalog-item-title {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  color: #000000;
+}
+
+p.catalog-item-price {
+  font-family: "Gilroy Light", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  text-align: right;
+}
+
+.catalog-pagination {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 24px;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  color: #000000;
+  background: #ebebeb;
+  text-transform: uppercase;
+}
+
+.page-numbers {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.page-current {
+  color: #000000;
+}
+
+.go-forward {
+  text-align: right;
+}

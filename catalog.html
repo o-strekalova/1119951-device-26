@@ -42,7 +42,7 @@
 
       <ul class="header-user-options">
           <li class="header-user-page"><a href="#">Валентин Петухов</a></li>
-          <li class="header-logout-link"><a href="#">Выйти</a></li>
+          <li class="logout-link"><a href="#">Выйти</a></li>
           <li class="header-compare-link"><a href="#">Сравнить</a></li>
           <li class="header-cart-link"><a href="#">Корзина</a></li>
       </ul>
@@ -60,27 +60,28 @@
         <section class="filters">
           <h2 class="catalog-filter">Фильтр:</h2>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
+            <fieldset class="filter price">
               <legend>Стоимость</legend>
-              от 0
+              <p class="price-label min">от 0</p>
               <input type="range" name="price-range" id="price-range" min="0" max="9000" value="0">
               <input type="range" name="price-range" id="price-range" min="0" max="9000" value="5000">
-              до 5000
+              <p class="price-label max">до 5000</p>
+              </label>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter color">
               <legend>Цвет</legend>
                 <ul>
                   <li class="filter-checkbox">
                     <label>
-                      <input type="checkbox" name="color-black" id="black" checked>
+                      <input type="checkbox" name="color-black" id="black" checked disabled>
                       Черный
                     </label>
                   </li>
 
                   <li class="filter-checkbox">
                     <label>
-                      <input type="checkbox" name="color-white" id="white">
+                      <input type="checkbox" name="color-white" id="white" disabled>
                       Белый
                     </label>
                   </li>
@@ -108,7 +109,7 @@
                 </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter bluetooth">
           <legend>Bluetooth</legend>
             <ul>
               <li class="filter-radiobutton">
@@ -126,20 +127,20 @@
             </ul>
           </fieldset>
 
-            <button type="submit">Показать</button>
+            <button type="submit" class="button submit-button">Показать</button>
           </form>
       </section>
 
       <section class="sorting">
         <h2 class="catalog-sorting">Сортировка:</h2>
         <ul class="catalog-sort-by">
-          <li><button type="button" class="sort-by-current">По цене</button></li>
+          <li><button type="button" class="sort-by sort-by-current">По цене</button></li>
           <li><button type="button" class="sort-by">По типу</button></li>
           <li><button type="button" class="sort-by">По популярности</button></li>
         </ul>
-        <ul class="sorting-direction">
-          <li><button type="button" class="sorting-direction-ascending sorting-direction-current"></button></li>
-          <li><button type="button" class="sorting-direction-descending "></button></li>
+        <ul class="sorting-direction-section">
+          <li><button type="button" class="sorting-direction sort-up" aria-label="Вверх">up</button></li>
+          <li><button type="button" class="sorting-direction sort-down sorting-direction-current" aria-label="Вниз">down</button></li>
         </ul>
       </section>
 
@@ -225,9 +226,9 @@
       <section class="catalog-pagination">
         <a href="#" class="go-back">Назад</a></li>
         <ul class="page-numbers">
-            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="page-number page-current"><a href="#">1</a></li>
+            <li class="page-number"><a href="#">2</a></li>
+            <li class="page-number"><a href="#">3</a></li>
         </ul>
         <a href="#" class="go-forward">Вперед</a></li>
         </ul>
@@ -240,7 +241,7 @@
         </a>
         <ul class="footer-user-options">
           <li class="footer-user-page"><a href="#">Валентин Петухов</a></li>
-          <li class="footer-logout-link"><a href="#">Выйти</a></li>
+          <li class="logout-link"><a href="#">Выйти</a></li>
           <li class="footer-compare-link"><a href="#">Сравнить</a></li>
           <li class="footer-cart-link"><a href="#">Корзина</a></li>
         </ul>
