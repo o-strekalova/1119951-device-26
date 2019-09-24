@@ -10,12 +10,12 @@
     src: url('Gilroy-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    }   
+    }
 
 body {
     margin: 0;
     padding: 0;
-  
+
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -36,7 +36,7 @@ body {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  } 
+  }
 
 a {
     text-decoration: none;
@@ -76,12 +76,12 @@ input[type="search"]:focus {
 }
 
 .search-button {
-  width: 85px;
-  height: 49px;
-  border: solid 2px #000000;
-  text-align: center;
-  color: #000000;
-  padding: 13px 21px;
+    width: 85px;
+    height: 49px;
+    border: solid 2px #000000;
+    text-align: center;
+    color: #000000;
+    padding: 13px 21px;
 }
 
 .main-navigation a.search-button:hover,
@@ -101,7 +101,8 @@ input[type="search"]:focus {
     font-weight: 800;
     line-height: 24px;
     letter-spacing: 3.6px;
-    color: #000000; 
+    color: #000000;
+    text-transform: uppercase;
 }
 
 .show-hidden-categories {
@@ -111,11 +112,15 @@ input[type="search"]:focus {
 
 .hidden-categories-list {
     line-height: 36px;
-    color: #000000; 
+    color: #000000;
 }
 
 .header-user-options {
     color: #000000;
+}
+
+.header-logout-link a {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-navigation a:hover,
@@ -135,13 +140,13 @@ input:focus::placeholder {
     color: #000000;
 }
 
-h3 {
-  font-family: "Gilroy Extra Bold", sans-serif;
-  font-size: 47px;
-  font-weight: 800;
-  line-height: 48px;
-  letter-spacing: 0.47px;
-  color: #000000;
+h1, h3 {
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.47px;
+    color: #000000;
 }
 
 h3.slider-slogan {
@@ -159,12 +164,12 @@ h3.slider-slogan {
 }
 
 .slider-text-big {
-  font-family: "Gilroy Light", sans-serif;
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 48px;
-  letter-spacing: 0.36px;
-  color: #000000;
+    font-family: "Gilroy Light", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+    letter-spacing: 0.36px;
+    color: #000000;
 }
 
 .slider-text-small {
@@ -206,21 +211,17 @@ figure.category-image {
     text-align: center;
 }
 
-figure.category-image img {
-    vertical-align: middle;
-}
-
 .category-link h4 {
-  font-family: "Gilroy Extra Bold", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 24px;
-  letter-spacing: 0.18px;
-  color: #000000;
-}
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    color: #000000;
+  }
 
 li.category-link:active {
-   opacity: 0.3;
+    opacity: 0.3;
 }
 
 figure.category-image:hover,
@@ -228,9 +229,6 @@ figure.category-image:focus,
 figure.category-image:active {
     background-color: #f0c52e;
 }
-
-/** Не могу при active сделать отдельный цвет фона, но сохранить целостность элемента (h4 + img).
-Не понимаю, почему vertical-align для img внутри figure не срабатывает **/
 
 .services {
     background: #e5e5e5;
@@ -260,3 +258,168 @@ ul.delivery-companies{
     letter-spacing: normal;
     list-style: circle;
 }
+
+button.open-map {
+  border: none;
+  background: none;
+}
+
+.main-footer {
+    background-color: #464646;
+    color: #ffffff;
+}
+
+.footer-logo img,
+.footer-copyright img {
+  object-fit: contain;
+  background-color: #ffc600;
+}
+
+.footer-user-options a {
+  color: #ffffff;
+  opacity: 0.7;
+  line-height: 36px;
+}
+
+.footer-site-navigation a {
+  font-family: "Gilroy extra Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+}
+
+a.social-button {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.footer-logo img:hover,
+.footer-logo img:focus,
+.footer-copyright img:hover,
+.footer-copyright img:focus,
+.footer-site-navigation a:hover,
+.footer-site-navigation a:focus,
+a.social-button:hover,
+a.social-button:focus {
+  opacity: 0.6;
+}
+
+.footer-user-options a:hover,
+.footer-user-options a:focus {
+  opacity: 1;
+}
+
+.footer-logo img:active,
+.footer-copyright img:active,
+.footer-site-navigation a:active,
+.footer-user-options a:active {
+  opacity: 0.3;
+}
+
+a.social-button:active {
+  opacity: 0.1;
+}
+
+.modal-contact-us {
+  width: 960px;
+  height: 553px;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-contact-us label {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.modal-contact-us input {
+  width: 360px;
+  height: 50px;
+  border: none;
+  background: #f2f2f2;
+}
+
+.modal-contact-us input::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: rgba(70, 70, 70, 0.4);
+  padding: 20px;
+}
+
+.modal-contact-us textarea {
+  width: 760px;
+  height: 156px;
+  border: none;
+  background: rgba(229, 229, 229, 0.5);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: rgba(70, 70, 70, 0.4);
+  padding: 20px;
+}
+
+.modal-contact-us input:hover {
+  background: #eaeaea;
+}
+
+.modal-contact-us input:focus {
+  background: #ffffff;
+  border: 3px solid #f0c52e;
+}
+
+.modal-contact-us input:focus::placeholder {
+  color: #464646;
+}
+
+.modal-contact-us input:disabled {
+  background: #f6dada;
+}
+
+.submit-button {
+  border: none;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  opacity: 0.5;
+}
+
+.close-button:hover,
+.close-button:focus {
+  opacity: 1;
+}
+
+.close-button:active{
+  opacity: 0.3;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-family: "Gilroy Extra Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+
+
