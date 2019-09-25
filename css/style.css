@@ -385,7 +385,7 @@ a.social-button:active {
   color: #464646;
 }
 
-.modal-contact-us input:disabled {
+.modal-contact-us input:invalid {
   background: #f6dada;
 }
 
@@ -464,8 +464,10 @@ fieldset.filter {
   color: rgba(0, 0, 0, 0.2)
 }
 
-.filter-checkbox,
-.filter-radiobutton {
+.filter-checkbox input,
+.filter-checkbox input + label,
+.filter-radiobutton input,
+.filter-radiobutton input + label {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -474,12 +476,58 @@ fieldset.filter {
   color: #000000;
 }
 
+.filter-checkbox input:hover,
+.filter-checkbox input:focus,
+.filter-radiobutton input:hover,
+.filter-radiobutton input:focus {
+  opacity: 0.6;
+}
 
-.filter-checkbox:disabled + label,
-.filter-radiobutton:disabled + label {
-  opacity: 25%;
+.filter-checkbox input:active,
+.filter-radiobutton input:active {
+  opacity: 1;
+}
+
+.filter-checkbox input:disabled,
+.filter-radiobutton input:disabled {
+  opacity: 0.25;
+}
+
+.filter-checkbox input:disabled + label,
+.filter-radiobutton input:disabled + label {
   color: #a6a6a6;
-} /*Не сработал. Проверить*/
+}
+
+/* Чекбокс он
+.filter-checkbox input:checked,
+.filter-checkbox input:checked:hover,
+.filter-checkbox input:checked:focus,
+.filter-checkbox input:active,
+.filter-checkbox input:checked:disabled
+
+Чекбокс офф
+.filter-checkbox input:checked:active,
+.filter-checkbox input,
+.filter-checkbox input:hover,
+.filter-checkbox input:focus,
+.filter-checkbox input:disabled
+*/
+
+/*radio-on
+.filter-radiobutton input:checked,
+.filter-radiobutton input:checked:hover,
+.filter-radiobutton input:checked:focus,
+.filter-radiobutton input:active,
+.filter-radiobutton input:checked:disabled
+
+radio-off
+.filter-radiobutton input:checked:active,
+.filter-radiobutton input,
+.filter-radiobutton input:hover,
+.filter-radiobutton input:focus,
+.filter-radiobutton input:disabled
+**/
+
 
 .sort-by {
   font-family: "Open Sans", sans-serif;
@@ -514,6 +562,13 @@ fieldset.filter {
  color:#000000;
 }
 
+p.catalog-item-image:hover,
+p.catalog-item-image:focus {
+  background-color: #eeeeee;
+  opacity: 0.7;
+  z-index: 1;
+}
+
 h3.catalog-item-title {
   font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 18px;
@@ -532,6 +587,23 @@ p.catalog-item-price {
   text-align: right;
 }
 
+.add-to-compare {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.add-to-compare:hover,
+.add-to-compare:focus {
+  color: #000000;
+}
+
+.add-to-compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .catalog-pagination {
   font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 16px;
@@ -543,14 +615,37 @@ p.catalog-item-price {
   text-transform: uppercase;
 }
 
-.page-numbers {
-  color: rgba(0, 0, 0, 0.3)
+.page-number a {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.page-current {
+.page-number:hover a,
+.page-number:focus a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-number:active a {
+  color: #000000;
+}
+
+
+.page-current a {
   color: #000000;
 }
 
 .go-forward {
   text-align: right;
 }
+
+a.go-back:hover,
+a.go-back:focus,
+a.go-forward:hover,
+a.go-forward:focus {
+  background-color: #d9d9d9;
+}
+
+a.go-back:active,
+a.go-forward:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
