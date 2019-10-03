@@ -13,9 +13,8 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
-
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -23,9 +22,7 @@ body {
   letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
-
   background-color: #ffffff;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,30 +43,30 @@ body {
 a {
   text-decoration: none;
   color: #000000;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   list-style: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 button {
   border: none;
   background: none;
-  padding: 0px;
+  padding: 0;
 }
 
 p {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .page-header {
@@ -137,7 +134,7 @@ input[type="search"]:focus {
   height: 48px;
   border: solid 2px #000000;
   text-align: center;
-  padding: 0px;
+  padding: 0;
   vertical-align: middle;
   color: #000000;
 }
@@ -175,7 +172,7 @@ input[type="search"]:focus {
 
 .header-site-navigation li:first-child {
   margin-right: auto;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .header-site-navigation li:nth-child(2) {
@@ -219,8 +216,8 @@ input[type="search"]:focus {
   min-height: 24px;
   width: 500px;
   margin-left: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   outline: 2px solid blue;
   justify-content: flex-end;
@@ -233,7 +230,7 @@ input[type="search"]:focus {
 
 .header-user-options li:first-child {
   margin-right: auto;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .header-user-options .logout-link {
@@ -282,10 +279,10 @@ h1, h3 {
   height: 500px;
   justify-content: space-between;
   outline: 2px solid blue;
-  margin: 0px;
+  margin: 0;
   margin-bottom: 100px;
   margin-top: -100px;
-  padding: 0px;
+  padding: 0;
 }
 
 .column {
@@ -304,7 +301,7 @@ h1, h3 {
 h3.slider-slogan {
   line-height: 56px;
   flex-basis: 100px;
-  margin: 0px;
+  margin: 0;
   margin-bottom: 35px;
   margin-top: -50px;
   outline: 2px solid blue;
@@ -322,8 +319,8 @@ h3.slider-slogan {
   height: 150px;
   margin-top: -20px;
   margin-right: 60px;
-  padding: 0px;
-  margin-bottom: 0px;
+  padding: 0;
+  margin-bottom: 0;
   margin-left: auto;
   order: -1;
   outline: 2px solid blue;
@@ -331,7 +328,7 @@ h3.slider-slogan {
 
 .slider-description {
   flex-basis: 60px;
-  margin: 0px;
+  margin: 0;
   margin-bottom: 35px;
   outline: 2px solid blue;
 }
@@ -339,7 +336,7 @@ h3.slider-slogan {
 .slider-features {
   width: 480px;
   height: 70px;
-  margin: 0px;
+  margin: 0;
   margin-top: 35px;
   display: flex;
   outline: 2px solid blue;
@@ -348,7 +345,7 @@ h3.slider-slogan {
 .slider-feature {
   width: 160px;
   height: 70px;
-  margin: 0px;
+  margin: 0;
   outline: 2px solid blue;
 }
 
@@ -359,14 +356,14 @@ h3.slider-slogan {
   line-height: 48px;
   letter-spacing: 0.36px;
   color: #000000;
-  margin: 0px;
+  margin: 0;
 }
 
 .slider-text-small {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.13px;
-  margin: 0px;
+  margin: 0;
 }
 
 .pagination-wrap {
@@ -377,7 +374,7 @@ h3.slider-slogan {
 
 .button {
   height: 40px;
-  background: linear-gradient(0deg, transparent 0px, transparent 18px, #f0c52e 18px,  #f0c52e 26px, transparent 26px, transparent 40px);
+  background: linear-gradient(0deg, transparent 0, transparent 18px, #f0c52e 18px,  #f0c52e 26px, transparent 26px, transparent 40px);
   text-transform: uppercase;
   font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 18px;
@@ -432,7 +429,7 @@ figure.category-image {
   height: 160px;
   background-color: rgba(240, 197, 46, 0.5);
   text-align: center;
-  margin: 0px;
+  margin: 0;
   display: flex;
   outline: 2px solid blue;
   justify-content: center;
@@ -450,7 +447,7 @@ figure.category-image {
   line-height: 24px;
   letter-spacing: 0.18px;
   color: #000000;
-  margin: 0px;
+  margin: 0;
   margin-top: 40px;
 }
 
@@ -475,7 +472,7 @@ figure.category-image:active {
 }
 
 .services-list {
-  margin: 0px;
+  margin: 0;
   width: 1160px;
   display: flex;
   flex-direction: column;
@@ -487,7 +484,7 @@ figure.category-image:active {
 
 .services-list li {
   display: flex;
-  margin: 0px;
+  margin: 0;
   width: 1160px;
   outline: 2px solid blue;
 }
@@ -544,14 +541,14 @@ p.service-description {
   display: flex;
   width: 1160px;
   justify-content: space-around;
-  margin: 0px;
+  margin: 0;
   outline: 2px solid blue;
 }
 
 .info {
   display: flex;
   width: 1160px;
-  margin: 0px;
+  margin: 0;
   margin-top: 93px;
   margin-bottom: 80px;
   outline: 2px solid blue;
@@ -574,14 +571,13 @@ p.service-description {
 }
 
 .info h3 {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 60px;
 }
 
 .info p {
   margin-bottom: 45px;
 }
-
 
 ul.delivery-companies{
   font-family: "Gilroy Extra Bold", sans-serif;
@@ -592,7 +588,7 @@ ul.delivery-companies{
   letter-spacing: normal;
   list-style: circle;
   padding-left: 35px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 72px;
 }
 
@@ -650,19 +646,19 @@ button.open-map {
 }
 
 .footer-user-options li {
-  margin: 0px;
+  margin: 0;
   margin-left: 65px;
-  padding: 0px;
+  padding: 0;
   outline: 2px solid blue;
 }
 
 .footer-user-options li:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .footer-user-options .logout-link {
   opacity: 0.3;
-  margin-right: 0px;
+  margin-right: 0;
   margin-left: 20px;
 }
 
@@ -757,7 +753,7 @@ a.social-button:active {
 .modal-contact-us {
   width: 960px;
   height: 553px;
-  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+  box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
   display: flex;
   flex-direction: column;
   outline: 2px solid blue;
@@ -847,7 +843,7 @@ a.social-button:active {
 .modal-map {
   width: 960px;
   height: 559px;
-  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+  box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
   display: flex;
   flex-direction: column;
   outline: 2px solid blue;
@@ -969,7 +965,7 @@ h2 {
   outline: 2px solid blue;
   height: 70px;
   background-color: #d9d9d9;
-  margin: 0px;
+  margin: 0;
 }
 
 h2.catalog-filter {
@@ -987,7 +983,7 @@ fieldset.filter {
 }
 
 fieldset.filter:first-child {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .filter legend {
@@ -1042,7 +1038,6 @@ fieldset.filter:first-child {
 .filter-radiobutton input:disabled + label {
   color: #a6a6a6;
 }
-
 
 /* Чекбокс он
 .filter-checkbox input:checked,
@@ -1115,7 +1110,7 @@ radio-off
 }
 
 .catalog-sort-by li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .sorting-direction-section {
@@ -1178,7 +1173,7 @@ radio-off
 }
 
 .catalog-list li:nth-child(2n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 p.catalog-item-image:hover,
@@ -1232,7 +1227,7 @@ p.catalog-item-price {
 .add-to-cart {
   width: 200px;
   padding: 12px 36px;
-  margin: 0px;
+  margin: 0;
   outline: 2px solid blue;
 }
 
@@ -1285,7 +1280,7 @@ p.catalog-item-price {
 }
 
 .page-numbers li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .page-number a {
@@ -1301,7 +1296,6 @@ p.catalog-item-price {
 .page-number:active a {
   color: #000000;
 }
-
 
 .page-current a {
   color: #000000;
