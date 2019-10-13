@@ -1018,6 +1018,16 @@ button.open-map {
   height: 35px;
   outline: 2px solid blue;
   justify-content: space-between;
+  position: relative;
+}
+
+.footer-bottom-wrap::before {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background: #ffc600;
+  position: absolute;
+  top: 13px;
 }
 
 .footer-social {
