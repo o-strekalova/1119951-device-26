@@ -42,7 +42,7 @@
               </ul>
             </form>
           </li>
-          <li><a href="#delivery">Доставка</a></li>
+          <li class="delivery-link"><a href="#delivery">Доставка</a></li>
           <li><a href="#warranty">Гарантия</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
@@ -70,9 +70,7 @@
               <h3 class="slider-slogan">Делай селфи,<br>как Бен Стилер!</h3>
               <p class="slide-number">01</p>
               <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. <br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <div class="pagination-wrap">
-                <a class="button more" href="catalog-item.html">Подробнее</a>
-              </div>
+              <a class="button more" href="catalog-item.html">Подробнее</a>
               <ul class="slider-features">
                 <li class="slider-feature">
                   <p class="slider-text-big">8,5 м</p>
@@ -97,9 +95,7 @@
               <h3 class="slider-slogan">Худеем<br>правильно!</h3>
               <p class="slide-number">02</p>
               <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы <br>не пропускать занятия и соблюдать диету.</p>
-              <div class="pagination-wrap">
-                <a class="button more" href="catalog-item.html">Подробнее</a>
-              </div>
+              <a class="button more" href="catalog-item.html">Подробнее</a>
               <ul class="slider-features">
                 <li class="slider-feature">
                   <p class="slider-text-big">48 часов</p>
@@ -116,9 +112,7 @@
               <h3 class="slider-slogan">Порхает как бабочка,<br>жалит как пчела!</h3>
               <p class="slide-number">03</p>
               <p class="slider-description">Этот обычный на первый взгляд квадрокоптер оснащен <br>мощным лазером, замаскированным под стандартную камеру.</p>
-              <div class="pagination-wrap">
-                <a class="button more" href="catalog-item.html">Подробнее</a>
-              </div>
+              <a class="button more" href="catalog-item.html">Подробнее</a>
               <ul class="slider-features">
                 <li class="slider-feature">
                   <p class="slider-text-big">800 м</p>
@@ -304,7 +298,7 @@
 
     <section class="modal modal-contact-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form action="https://echo.htmlacademy.ru" method="post" class="contact-form">
         <div class="contact-info-wrap">
           <div class="contact-info-column">
             <label for="name-field">Ваше имя:</label>
@@ -312,7 +306,7 @@
           </div>
           <div class="contact-info-column">
             <label for="email-field">Ваш e-mail:</label>
-            <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
+            <input type="email" name="email" id="email-field" placeholder="email@example.com" invalid>
           </div>
         </div>
         <label for="text-field">Текст письма:</label>
@@ -324,8 +318,12 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта проезда</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473677!2d37.527429316086916!3d55.68703400452979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1571258009630!5m2!1sru!2sru" width="960" height="559" allowfullscreen=""></iframe>
       <img class="map-big" src="img/map-big.jpg" width="960" height="559" alt="Адрес магазина Device Москва улица Строителей 15">
       <button class="close-button" type="button" aria-label="Закрыть"></button>
     </section>
+
+    <script src="js/modal-contact-us.js"></script>
+    <script src="js/modal-map.js"></script>
   </body>
 </html>

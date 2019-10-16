@@ -27,6 +27,7 @@ body {
   align-items: center;
   outline: 2px solid blue;
   box-sizing: border-box;
+  position: relative;
 }
 
 .visually-hidden {
@@ -74,7 +75,7 @@ body {
   display: flex;
   width: 1040px;
   outline: 2px solid blue;
-  align-items: baseline;
+  align-items: center;
 }
 
 .search-form {
@@ -126,16 +127,17 @@ input[type="search"]:focus {
 
 input[type="search"]:focus + .search-button {
   display: block;
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
-.main-navigation a.search-button:hover,
-.main-navigation a.search-button:focus {
+.main-navigation .search-button:hover,
+.main-navigation .search-button:focus {
   background: #000000;
   color: #ffffff;
 }
 
-.main-navigation a.search-button:active {
+.main-navigation .search-button:active {
   background: #000000;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -166,7 +168,7 @@ input[type="search"]:focus + .search-button {
   position: relative;
 }
 
-.header-site-navigation li:nth-child(2) {
+li.delivery-link {
   margin-left: 182px;
 }
 
@@ -190,7 +192,8 @@ input[type="search"]:focus + .search-button {
 }
 
 input.plus-link:focus + label {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .hidden-categories-list {
@@ -223,8 +226,12 @@ input.plus-link:checked ~ .hidden-categories-list {
   display: flex;
 }
 
-.form-hidden-categories .hidden-categories-list li {
+.hidden-categories-list li {
   margin: 0;
+  margin-right: 70px;
+}
+
+.hidden-categories-list li:first-child {
   margin-right: 70px;
 }
 
@@ -244,8 +251,8 @@ input.plus-link:checked ~ .hidden-categories-list {
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
-  outline: 2px solid blue;
-  justify-content: flex-end;
+  outline: 2px solid red;
+  justify-content: flex-start;
   white-space: nowrap;
 }
 
@@ -328,7 +335,7 @@ a.search-button:focus {
   color: #ffffff;
 }
 
-a.search-button:active {
+.search-button:active {
   opacity: 1;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -345,7 +352,8 @@ main {
   outline: 2px solid blue;
 }
 
-h1, h3 {
+main h1,
+main h3 {
   font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 47px;
   font-weight: 800;
@@ -390,7 +398,7 @@ h1, h3 {
   align-self: center;
 }
 
-h3.slider-slogan {
+.slider-slogan {
   line-height: 56px;
   flex-basis: 100px;
   margin: 0;
@@ -467,16 +475,10 @@ h3.slider-slogan {
   margin: 0;
 }
 
-.pagination-wrap {
-  display: flex;
-  width: 220px;
-  outline: 2px solid blue;
-}
-
 .slider-controls {
   position: absolute;
-  top: 220px;
-  right: 50px;
+  top: 332px;
+  right: 70px;
   z-index: 50;
   display: flex;
   flex-wrap: wrap;
@@ -492,15 +494,18 @@ h3.slider-slogan {
 }
 
 #show-slide-1:focus ~ .slider-controls label[for="show-slide-1"] {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #show-slide-2:focus ~ .slider-controls label[for="show-slide-2"] {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #show-slide-3:focus ~ .slider-controls label[for="show-slide-3"] {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #show-slide-1:checked ~ .slider-list #slide-1 {
@@ -676,15 +681,18 @@ h3.slider-slogan {
 }
 
 #delivery:focus ~ .service-controls label[for="delivery"] {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #warranty:focus ~ .service-controls label[for="warranty"] {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #credit:focus ~ .service-controls label[for="credit"] {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .service-controls label {
@@ -872,10 +880,12 @@ h3.slider-slogan {
   width: 260px;
 }
 
-button.open-map {
+.open-map {
   border: none;
   background: none;
   margin-bottom: 72px;
+  width: 560px;
+  height: 222px;
 }
 
 .main-footer {
@@ -1097,11 +1107,62 @@ a.social-button:active {
   opacity: 0.1;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
-  margin: auto;
+  margin-right: auto;
   position: fixed;
   z-index: 90;
   top: 150px;
+  display: none;
+}
+
+.modal-show {
+  display: flex;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-contact-us {
@@ -1111,7 +1172,6 @@ a.social-button:active {
   background: #ffffff;
   flex-direction: column;
   outline: 2px solid blue;
-  display: none;
 }
 
 .modal-contact-us form {
@@ -1154,6 +1214,7 @@ a.social-button:active {
   background: #f2f2f2;
   margin-top: 10px;
   box-sizing: border-box;
+  padding: 20px;
 }
 
 .modal-contact-us input::placeholder {
@@ -1179,16 +1240,25 @@ a.social-button:active {
   margin-bottom: 20px;
 }
 
-.modal-contact-us input:hover {
+.modal-contact-us input:hover,
+.modal-contact-us textarea:hover {
   background: #eaeaea;
 }
 
-.modal-contact-us input:focus {
+.modal-contact-us input:focus,
+.modal-contact-us textarea:focus {
   background: #ffffff;
   border: 3px solid #f0c52e;
+  box-sizing: border-box;
 }
 
-.modal-contact-us input:focus::placeholder {
+.modal-contact-us textarea:focus {
+  width: 760px;
+  height: 156px;
+}
+
+.modal-contact-us input:focus::placeholder,
+.modal-contact-us textarea:focus {
   color: #464646;
 }
 
@@ -1200,10 +1270,23 @@ a.social-button:active {
   width: 960px;
   height: 559px;
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
-  display: none;
   flex-direction: column;
   outline: 2px solid blue;
   margin: auto;
+}
+
+.modal-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
 }
 
 .close-button {
@@ -1218,7 +1301,7 @@ a.social-button:active {
   width: 55px;
   height: 55px;
   background: url("../img/modal-close.svg") no-repeat 0 0;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   right: 0;
 }
@@ -1324,7 +1407,7 @@ a.social-button:active {
   outline: 2px solid blue;
 }
 
-h2 {
+main h2 {
   font-family: "Gilroy Extra Bold", sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -1341,7 +1424,7 @@ h2 {
   margin: 0;
 }
 
-h2.catalog-filter {
+.catalog-filter {
   width: 100px;
   outline: 2px solid blue;
   margin-left: 200px;
@@ -1363,8 +1446,8 @@ fieldset.filter::before {
   height: 2px;
   background: #000000;
   position: absolute;
+  left: 10px;
   top: -16px;
-  left: 9px;
 }
 
 fieldset.filter:first-child {
@@ -1433,9 +1516,10 @@ fieldset.filter:first-child {
 }
 
 input[type="range"]:focus + label,
-.range-min-price:focus ~ .range-filter .range-controls .toggle-min,
-.range-max-price:focus ~ .range-filter .range-controls .toggle-max {
-  outline: 5px auto rgba(0, 150, 255, 1);
+.range-min-price:focus ~ .range-filter .toggle-min,
+.range-max-price:focus ~ .range-filter .toggle-max {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .range-controls .toggle-min {
@@ -1482,7 +1566,8 @@ input[type="range"]:focus + label,
 
 .filter-checkbox input:focus + label::before,
 .filter-radiobutton input:focus + label::before {
-  outline: 5px auto rgba(0, 150, 255, 1);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .filter-checkbox input:hover + label::before,
@@ -1649,6 +1734,10 @@ input[type="range"]:focus + label,
   margin-right: 0;
 }
 
+.new {
+  content: ""
+}
+
 .item-info {
   display: flex;
   outline: 2px solid blue;
@@ -1687,9 +1776,12 @@ input[type="range"]:focus + label,
   background: rgba(238, 238, 238, 0.7);
   align-self: center;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
   text-align: center;
   display: none;
+  cursor: pointer;
 }
 
 a:hover + .hover-links,
