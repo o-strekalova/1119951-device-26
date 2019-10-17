@@ -13,6 +13,7 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", Arial, sans-serif;
@@ -202,17 +203,19 @@ li.delivery-link {
 
 .form-hidden-categories {
   display: inline-block;
+  vertical-align: center;
 }
 
 .plus-link + label {
   display: inline-block;
+  vertical-align: center;
   width: 16px;
   height: 18px;
   margin: 0;
-  padding: 0;
   margin-left: 16px;
   background: url("../img/plus.svg") no-repeat 0 3px;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 input.plus-link:focus + label {
@@ -241,7 +244,7 @@ input.plus-link:focus + label {
   left: -60px;
   background: #f7e296;
   padding-left: 60px;
-  z-index: 100;
+  z-index: 2;
 }
 
 .form-hidden-categories:hover .hidden-categories-list,
@@ -284,6 +287,7 @@ input.plus-link:checked ~ .hidden-categories-list {
   outline: 2px solid blue;
   margin-left: 45px;
   position: relative;
+  cursor: pointer;
 }
 
 .header-user-options li:first-child {
@@ -415,20 +419,20 @@ main h3 {
   color: #000000;
 }
 
+.slider {
+  position: relative;
+}
+
 .slider-wrap {
   width: 1160px;
   height: 113px;
   background-color:  rgba(240, 197, 46, 0.5);
 }
 
-.slider {
-  position: relative;
-}
-
 .slide {
   display: none;
   width: 1160px;
-  height: 500px;
+  min-height: 500px;
   justify-content: space-between;
   outline: 2px solid blue;
   margin: 0;
@@ -453,12 +457,11 @@ main h3 {
 
 .slider-slogan {
   line-height: 56px;
-  flex-basis: 100px;
-  margin: 0;
+  min-height: 100px;
   margin-bottom: 35px;
   margin-top: 80px;
   outline: 2px solid blue;
-  z-index: 10;
+  z-index: 1;
 }
 
 .slide-number {
@@ -470,7 +473,7 @@ main h3 {
   text-align: right;
   color: #ffffff;
   min-width: 200px;
-  min-height: 150px;
+  height: 150px;
   order: -1;
   outline: 2px solid blue;
   position: absolute;
@@ -489,7 +492,7 @@ main h3 {
 }
 
 .slider-description {
-  flex-basis: 60px;
+  min-height: 60px;
   margin: 0;
   margin-bottom: 35px;
   outline: 2px solid blue;
@@ -497,7 +500,7 @@ main h3 {
 
 .slider-features {
   width: 480px;
-  height: 70px;
+  min-height: 70px;
   margin: 0;
   margin-top: 50px;
   display: flex;
@@ -506,7 +509,7 @@ main h3 {
 
 .slider-feature {
   width: 160px;
-  height: 70px;
+  min-height: 70px;
   margin: 0;
   outline: 2px solid blue;
 }
@@ -530,66 +533,70 @@ main h3 {
 
 .slider-controls {
   position: absolute;
-  top: 332px;
+  top: 334px;
   right: 70px;
-  z-index: 50;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
+  outline: 2px solid blue;
 }
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: center;
   width: 12px;
   height: 12px;
   background: url("../img/slider-button-empty.svg") no-repeat 0 0;
   background-size: 12px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
-#show-slide-1:focus ~ .slider-controls label[for="show-slide-1"] {
+.show-slide-1:focus ~ .slider-controls label[for="show-slide-1"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-#show-slide-2:focus ~ .slider-controls label[for="show-slide-2"] {
+.show-slide-2:focus ~ .slider-controls label[for="show-slide-2"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-#show-slide-3:focus ~ .slider-controls label[for="show-slide-3"] {
+.show-slide-3:focus ~ .slider-controls label[for="show-slide-3"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-#show-slide-1:checked ~ .slider-list #slide-1 {
+.show-slide-1:checked ~ .slider-list #slide-1 {
   display: flex;
 }
 
-#show-slide-1:checked ~ .slider-controls label[for="show-slide-1"] {
+.show-slide-1:checked ~ .slider-controls label[for="show-slide-1"] {
   background: url("../img/slider-button.svg") no-repeat 0 0;
   background-size: 12px;
 }
 
-#show-slide-2:checked ~ .slider-list #slide-2 {
+.show-slide-2:checked ~ .slider-list #slide-2 {
   display: flex;
 }
 
-#show-slide-2:checked ~ .slider-controls label[for="show-slide-2"] {
+.show-slide-2:checked ~ .slider-controls label[for="show-slide-2"] {
   background: url("../img/slider-button.svg") no-repeat 0 0;
   background-size: 12px;
 }
 
-#show-slide-3:checked ~ .slider-list #slide-3 {
+.show-slide-3:checked ~ .slider-list #slide-3 {
   display: flex;
 }
 
-#show-slide-3:checked ~ .slider-controls label[for="show-slide-3"] {
+.show-slide-3:checked ~ .slider-controls label[for="show-slide-3"] {
   background: url("../img/slider-button.svg") no-repeat 0 0;
   background-size: 12px;
 }
 
 .button {
   display: inline-block;
+  vertical-align: center;
   height: 40px;
   background: linear-gradient(0deg, transparent 0, transparent 16px, #f0c52e 16px,  #f0c52e 24px, transparent 24px, transparent 40px);
   text-transform: uppercase;
@@ -685,11 +692,18 @@ main h3 {
 
 .services {
   background: #e5e5e5;
-  width: 1440px;
+  width: 100%;
+  min-height: 288px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 94px;
+  outline: 2px solid blue;
+}
+
+.service-wrap {
+  width: 1160px;
+  display: flex;
   outline: 2px solid blue;
   position: relative;
 }
@@ -701,10 +715,9 @@ main h3 {
   flex-direction: column;
   align-items: center;
   outline: 2px solid blue;
-  margin-bottom: 150px;
   margin-top: -100px;
+  margin-left: auto;
   box-sizing: border-box;
-  margin-left: 540px;
 }
 
 .services-list li {
@@ -721,7 +734,7 @@ main h3 {
 
 .service-controls {
   width: 278px;
-  height: 320px;
+  min-height: 320px;
   border-right: 7px solid #000000;
   outline: 2px solid blue;
   display: flex;
@@ -729,29 +742,29 @@ main h3 {
   justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
-  left: 140px;
   top: -80px;
 }
 
-#delivery:focus ~ .service-controls label[for="delivery"] {
+.delivery-button:focus ~ .service-controls label[for="delivery"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-#warranty:focus ~ .service-controls label[for="warranty"] {
+.warranty-button:focus ~ .service-controls label[for="warranty"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-#credit:focus ~ .service-controls label[for="credit"] {
+.credit-button:focus ~ .service-controls label[for="credit"] {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
 .service-controls label {
-  flex-basis: 40px;
+  height: 40px;
   width: 160px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .service-controls label:first-child {
@@ -781,11 +794,11 @@ main h3 {
   letter-spacing: normal;
 }
 
-#delivery:checked ~ .services-list .delivery {
+.delivery-button:checked ~ .services-list .delivery {
   display: flex;
 }
 
-#delivery:checked ~ .service-controls label[for="delivery"] {
+.delivery-button:checked ~ .service-controls label[for="delivery"] {
   width: 278px;
   background: #000000;
   color: #f7e184;
@@ -793,11 +806,11 @@ main h3 {
   padding-left: 23px;
 }
 
-#warranty:checked ~ .services-list .warranty {
+.warranty-button:checked ~ .services-list .warranty {
   display: flex;
 }
 
-#warranty:checked ~ .service-controls label[for="warranty"] {
+.warranty-button:checked ~ .service-controls label[for="warranty"] {
   width: 278px;
   background: #000000;
   color: #f7e184;
@@ -805,11 +818,11 @@ main h3 {
   padding-left: 23px;
 }
 
-#credit:checked ~ .services-list .credit {
+.credit-button:checked ~ .services-list .credit {
   display: flex;
 }
 
-#credit:checked ~ .service-controls label[for="credit"] {
+.credit-button:checked ~ .service-controls label[for="credit"] {
   width: 278px;
   background: #000000;
   color: #f7e184;
@@ -873,6 +886,7 @@ main h3 {
 
 .about-us {
   width: 490px;
+  margin-right: auto;
 }
 
 .contacts {
@@ -908,7 +922,6 @@ main h3 {
   list-style: none;
   padding-left: 35px;
   margin-top: 0;
-  margin-bottom: 69px;
 }
 
 .delivery-companies li {
@@ -918,6 +931,7 @@ main h3 {
 .delivery-companies li::before {
   content: "";
   display: inline-block;
+  vertical-align: center;
   width: 8px;
   height: 8px;
   border: 2px solid #e5e5e5;
@@ -931,6 +945,7 @@ main h3 {
 .info-button,
 .contact-us-button {
   width: 260px;
+  margin-top: auto;
 }
 
 .open-map {
@@ -939,6 +954,7 @@ main h3 {
   margin-bottom: 72px;
   width: 560px;
   height: 222px;
+  cursor: pointer;
 }
 
 .main-footer {
@@ -983,7 +999,7 @@ footer button {
 
 .footer-wrap {
   width: 1160px;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   outline: 2px solid blue;
@@ -1002,7 +1018,7 @@ footer button {
   max-width: 520px;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 36px;
+  min-height: 36px;
   outline: 2px solid blue;
 }
 
@@ -1011,6 +1027,7 @@ footer button {
   margin-left: 40px;
   outline: 2px solid blue;
   position: relative;
+  cursor: pointer;
 }
 
 .footer-user-options li:first-child {
@@ -1086,6 +1103,10 @@ footer button {
   outline: 2px solid blue;
 }
 
+.footer-middle-wrap a {
+  color: #ffffff;
+}
+
 .footer-site-navigation {
   display: flex;
   width: 440px;
@@ -1135,6 +1156,7 @@ a.social-button {
   color: #ffffff;
   opacity: 0.3;
   display: inline-block;
+  vertical-align: center;
   width: 32px;
   height: 32px;
   background-size: 32px;
@@ -1230,11 +1252,12 @@ a.social-button:active {
 }
 
 .modal {
-  margin-right: auto;
   position: fixed;
-  z-index: 90;
+  z-index: 3;
   top: 150px;
+  left: 50%;
   display: none;
+  margin-left: -480px;
 }
 
 .modal-show {
@@ -1353,20 +1376,19 @@ a.social-button:active {
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
   flex-direction: column;
   outline: 2px solid blue;
-  margin: auto;
 }
 
 .modal-map img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 4;
   margin: 0;
 }
 
 .modal-map iframe {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   border: none;
 }
 
@@ -1379,12 +1401,11 @@ a.social-button:active {
   width: 55px;
   height: 55px;
   outline: 2px solid blue;
-  width: 55px;
-  height: 55px;
   background: url("../img/modal-close.svg") no-repeat 0 0;
-  z-index: 3;
+  z-index: 6;
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 .close-button:hover,
@@ -1482,10 +1503,18 @@ a.social-button:active {
   margin-left: 200px;
   margin-right: 70px;
   margin-top: 80px;
+  position: relative;
 }
 
 .filter-form fieldset {
   outline: 2px solid blue;
+  box-sizing: border-box;
+  padding: 0;
+  width: 200px;
+  border: none;
+  color: #000000;
+  margin-top: 20px;
+  margin-left: 0;
 }
 
 main h2 {
@@ -1499,7 +1528,6 @@ main h2 {
 }
 
 .filter-title-wrap {
-  outline: 2px solid blue;
   height: 70px;
   background-color: #d9d9d9;
   margin: 0;
@@ -1513,24 +1541,6 @@ main h2 {
   margin-bottom: 25px;
 }
 
-fieldset.filter {
-  border: none;
-  color: #000000;
-  margin-top: 20px;
-  margin-left: -10px;
-  position: relative;
-}
-
-fieldset.filter::before {
-  content: "";
-  width: 201px;
-  height: 2px;
-  background: #000000;
-  position: absolute;
-  left: 10px;
-  top: -16px;
-}
-
 fieldset.filter:first-child {
   margin-top: 0;
 }
@@ -1542,6 +1552,16 @@ fieldset.filter:first-child {
   line-height: 24px;
   letter-spacing: 0.18px;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.filter-form legend::before {
+  content: "";
+  width: 201px;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  top: -11px;
 }
 
 .price-label {
@@ -1553,11 +1573,11 @@ fieldset.filter:first-child {
   text-align: center;
   color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 68px;
+  top: 65px;
 }
 
 .max-price {
- left: 100px;
+ left: 75px;
 }
 
 .range-filter {
@@ -1594,6 +1614,7 @@ fieldset.filter:first-child {
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 input[type="range"]:focus + label,
@@ -1621,6 +1642,7 @@ input[type="range"]:focus + label,
   color: #000000;
   padding-left: 40px;
   position: relative;
+  cursor: pointer;
 }
 
 .filter-checkbox input + label::before {
@@ -1704,6 +1726,7 @@ input[type="range"]:focus + label,
   margin-top: 25px;
   outline: 2px solid blue;
   border: none;
+  cursor: pointer;
 }
 
 .items-column {
@@ -1715,17 +1738,22 @@ input[type="range"]:focus + label,
 
 .sorting {
   display: flex;
-  outline: 2px solid blue;
   height: 70px;
   margin-bottom: 50px;
+  width: 760px;
+  display: flex;
+  margin-left: 70px;
+  align-items: center;
 }
 
 .sorting-wrap {
-  width: 760px;
-  display: flex;
-  outline: 2px solid blue;
-  margin-left: 70px;
-  align-items: center;
+  width: 100%;
+  background: #ebebeb;
+  height: 70px;
+  position: absolute;
+  top: 452px;
+  left: 0;
+  z-index: -1;
 }
 
 .catalog-sort-by {
@@ -1756,6 +1784,7 @@ input[type="range"]:focus + label,
   line-height: 18px;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .sorting-direction {
@@ -1763,6 +1792,7 @@ input[type="range"]:focus + label,
   width: 11px;
   height: 10px;
   background-size: 11px 10px;
+  cursor: pointer;
 }
 
 .sort-up {
@@ -1830,7 +1860,7 @@ input[type="range"]:focus + label,
   height: 61px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  z-index: 2;
+  z-index: 1;
   display: block;
   position: absolute;
   top: 28px;
@@ -1877,7 +1907,7 @@ input[type="range"]:focus + label,
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   display: none;
   cursor: pointer;
@@ -1906,6 +1936,7 @@ a:focus + .hover-links,
   color: rgba(0, 0, 0, 0.5);
   outline: 2px solid blue;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .add-to-compare:hover,
@@ -1929,7 +1960,7 @@ a:focus + .hover-links,
   display: flex;
   outline: 2px solid blue;
   width: 760px;
-  height: 70px;
+  min-height: 70px;
   margin-left: 70px;
   align-items: center;
   justify-content: space-between;
@@ -1970,7 +2001,7 @@ a:focus + .hover-links,
   text-align: center;
   margin-right: auto;
   width: 136px;
-  height: 70px;
+  min-height: 70px;
   padding: 25px;
   box-sizing: border-box;
 }
@@ -1979,7 +2010,7 @@ a:focus + .hover-links,
   text-align: center;
   margin-left: auto;
   width: 136px;
-  height: 70px;
+  min-height: 70px;
   padding: 25px;
   box-sizing: border-box;
 }
