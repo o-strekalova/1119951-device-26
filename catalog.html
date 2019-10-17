@@ -67,9 +67,9 @@
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="filter price">
               <legend>Стоимость</legend>
-              <input type="range" name="price-range" id="price-range" min="0" max="9000" value="0" class="range-min-price visually-hidden">
+              <input type="range" name="price-range-min" id="price-range-min" min="0" max="9000" value="0" class="range-min-price visually-hidden">
               <label class="min-price price-label">от 0</label>
-              <input type="range" name="price-range" id="price-range" min="0" max="9000" value="5000" class="range-max-price visually-hidden">
+              <input type="range" name="price-range-max" id="price-range-max" min="0" max="9000" value="5000" class="range-max-price visually-hidden">
               <label class="max-price price-label">до 5000</label>
               <div class="range-filter">
                 <div class="range-controls">
@@ -196,13 +196,14 @@
           </section>
 
           <section class="catalog-pagination">
-            <a href="#" class="go-back">Назад</a></li>
+            <h2 calss="visually-hidden">Страницы каталога</h2>
+            <a href="#" class="go-back">Назад</a>
             <ul class="page-numbers">
               <li class="page-number page-current"><a href="#">1</a></li>
               <li class="page-number"><a href="#">2</a></li>
               <li class="page-number"><a href="#">3</a></li>
             </ul>
-            <a href="#" class="go-forward">Вперед</a></li>
+            <a href="#" class="go-forward">Вперед</a>
           </section>
         </div>
       </div>
