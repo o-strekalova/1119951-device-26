@@ -172,8 +172,8 @@ input[type="search"]:focus + .search-button {
   text-transform: uppercase;
   width: 1040px;
   display: flex;
-  margin-bottom: 54px;
   margin-top: 40px;
+  padding-bottom: 54px;
 }
 
 .header-site-navigation li {
@@ -232,16 +232,16 @@ li.delivery-link {
   flex-wrap: wrap;
   align-content: flex-start;
   position: absolute;
-  top: 60px;
   left: -60px;
   background: #f7e296;
   padding-left: 60px;
+  padding-top: 38px;
   z-index: 2;
 }
 
 .form-hidden-categories:hover .hidden-categories-list,
-.form-hidden-categories:focus .hidden-categories-list,
-.plus-link:checked ~ .hidden-categories-list {
+.plus-link:checked ~ .hidden-categories-list,
+.hidden-categories-list:hover {
   display: flex;
 }
 
