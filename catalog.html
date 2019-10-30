@@ -7,7 +7,6 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="header-logo-wrap"></div>
     <header class="page-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
@@ -54,7 +53,21 @@
         <li><a href="catalog.html">Каталог товаров</a></li>
         <li class="breadcrumbs-current">Моноподы для селфи</li>
       </ul>
-      <div class="sorting-wrap"></div>
+
+      <div class="sorting-wrap">
+        <section class="sorting">
+          <h2 class="catalog-sorting">Сортировка:</h2>
+          <ul class="catalog-sort-by">
+            <li><a href="#" class="sort-by sort-by-current">По цене</a></li>
+            <li><a href="#" class="sort-by">По типу</a></li>
+            <li><a href="#" class="sort-by">По популярности</a></li>
+          </ul>
+          <ul class="sorting-direction-section">
+            <li><a href="#" class="sorting-direction sort-up" aria-label="Вверх"></a></li>
+            <li><a href="#" class="sorting-direction sort-down sorting-direction-current" aria-label="Вниз"></a></li>
+          </ul>
+        </section>
+      </div>
 
       <div class="catalog-columns">
         <section class="filters">
@@ -121,19 +134,6 @@
         </section>
 
         <div class="items-column">
-            <section class="sorting">
-              <h2 class="catalog-sorting">Сортировка:</h2>
-              <ul class="catalog-sort-by">
-                <li><a href="#" class="sort-by sort-by-current">По цене</a></li>
-                <li><a href="#" class="sort-by">По типу</a></li>
-                <li><a href="#" class="sort-by">По популярности</a></li>
-              </ul>
-              <ul class="sorting-direction-section">
-                <li><a href="#" class="sorting-direction sort-up" aria-label="Вверх"></a></li>
-                <li><a href="#" class="sorting-direction sort-down sorting-direction-current" aria-label="Вниз"></a></li>
-              </ul>
-          </section>
-
           <section class="catalog">
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="catalog-list">
@@ -151,7 +151,7 @@
               <li class="catalog-item">
                 <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" class="catalog-item-image">
                 <div class="item-info">
-                  <a href="#"><h3 class="catalog-item-title">Профессиональная селфи-палка</h3></a>
+                  <a href="#"><h3 class="catalog-item-title">Профессиональная<br>селфи-палка</h3></a>
                   <p class="catalog-item-price">1 500 руб.</p>
                 </div>
                 <div class="hover-links">
@@ -173,7 +173,7 @@
               <li class="catalog-item new">
                 <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной" class="catalog-item-image">
                 <div class="item-info">
-                  <a href="#"><h3 class="catalog-item-title">Селфи-палка "Следуй за мной"</h3></a>
+                  <a href="#"><h3 class="catalog-item-title">Селфи-палка «Следуй за мной»</h3></a>
                   <p class="catalog-item-price">4 900 руб.</p>
                 </div>
                 <div class="hover-links">
@@ -200,33 +200,33 @@
 
     <footer class="main-footer">
       <div class="footer-wrap">
-          <div class="footer-top-wrap">
-            <a class="footer-logo" href="index.html">
-              <img src="img/logo-device-footer.svg" width="163" height="35" alt="Логотип магазина Device">
-            </a>
-            <ul class="footer-user-options">
-              <li class="footer-user-link"><a href="#">Валентин Петухов</a></li>
-              <li class="logout-link"><a href="#">Выйти</a></li>
-              <li class="footer-compare-link"><a href="#">Сравнить</a></li>
-              <li class="footer-cart-link"><a href="#">Корзина</a></li>
-            </ul>
-          </div>
-          <div class="footer-middle-wrap">
-            <p class="footer-address">г. Москва, ул. Строителей, 15</p>
-            <ul class="footer-site-navigation">
-              <li><a href="#delivery">Доставка</a></li>
-              <li><a href="#warranty">Гарантия</a></li>
-              <li><a href="#contacts">Контакты</a></li>
-            </ul>
-            <p class="footer-phone-number"><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
-          </div>
-          <div class="footer-bottom-wrap">
-            <ul class="footer-social">
-              <li><a href="#" class="social-button fb" aria-label="Device на Facebook"></a></li>
-              <li><a href="#" class="social-button inst" aria-label="Device в Instagram"></a></li>
-              <li><a href="#" class="social-button twitter" aria-label="Device в Twitter"></a></li>
-            </ul>
-            <p class="footer-copyright">
+        <div class="footer-top-wrap">
+          <a class="footer-logo" href="index.html">
+            <img src="img/logo-device-footer.svg" width="163" height="35" alt="Логотип магазина Device">
+          </a>
+          <ul class="footer-user-options">
+            <li class="footer-user-link"><a href="#">Валентин Петухов</a></li>
+            <li class="logout-link"><a href="#">Выйти</a></li>
+            <li class="footer-compare-link"><a href="#">Сравнить</a></li>
+            <li class="footer-cart-link"><a href="#">Корзина</a></li>
+          </ul>
+        </div>
+        <div class="footer-middle-wrap">
+          <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+          <ul class="footer-site-navigation">
+            <li><a href="#delivery">Доставка</a></li>
+            <li><a href="#warranty">Гарантия</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+          <p class="footer-phone-number"><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
+        </div>
+        <div class="footer-bottom-wrap">
+          <ul class="footer-social">
+            <li><a href="#" class="social-button fb" aria-label="Device на Facebook"></a></li>
+            <li><a href="#" class="social-button inst" aria-label="Device в Instagram"></a></li>
+            <li><a href="#" class="social-button twitter" aria-label="Device в Twitter"></a></li>
+          </ul>
+          <p class="footer-copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss">
               <img src="img/logo-html.svg" width="27" height="35" alt="Ссылка на интенсив HTML Академии">
             </a>

@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 40px;
 }
 
 header a {
@@ -90,14 +91,8 @@ header button {
   padding: 0;
 }
 
-.header-logo-wrap {
-  width: 100%;
-  height: 40px;
-  background-color: #ffffff;
-}
-
 .main-header-logo img {
-  margin-top: -19px;
+  margin-top: -18px;
   margin-bottom: 8px;
 }
 
@@ -189,7 +184,7 @@ input[type="search"]:focus + .search-button {
   width: 1040px;
   display: flex;
   margin-top: 29px;
-  padding-bottom: 54px;
+  padding-bottom: 49px;
 }
 
 .header-site-navigation li {
@@ -301,7 +296,7 @@ li.delivery-link {
 .header-user-options .logout-link {
   opacity: 0.3;
   margin-right: auto;
-  margin-left: 20px;
+  margin-left: -2px;
 }
 
 .header-user-options li:first-child::before {
@@ -424,7 +419,7 @@ main h3 {
 
 .slider-wrap {
   width: 1160px;
-  height: 110px;
+  height: 112px;
   background-color:  rgba(240, 197, 46, 0.5);
 }
 
@@ -435,7 +430,7 @@ main h3 {
   justify-content: space-between;
   margin: 0;
   margin-bottom: 90px;
-  margin-top: -112px;
+  margin-top: -110px;
   padding: 0;
 }
 
@@ -525,7 +520,7 @@ main h3 {
 
 .slider-controls {
   position: absolute;
-  top: 324px;
+  top: 326px;
   right: 84px;
   z-index: 1;
   display: flex;
@@ -1403,19 +1398,19 @@ a.social-button:active {
 
 .page-title {
   width: 1040px;
-  margin-top: 40px;
-  margin-bottom: 25px;
+  margin-top: 36px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs {
   width: 1040px;
   display: flex;
-  margin-bottom: 49px;
+  margin-bottom: 44px;
   align-items: baseline;
 }
 
 .breadcrumbs li {
-  margin-right: 39px;
+  margin-right: 37px;
   position: relative;
 }
 
@@ -1428,7 +1423,7 @@ a.social-button:active {
   background-size: 4px 7px;
   position: absolute;
   top: 13px;
-  left: 72px;
+  left: 69px;
 }
 
 .breadcrumbs li:nth-child(2)::after {
@@ -1454,20 +1449,20 @@ a.social-button:active {
 }
 
 .catalog-columns {
-  width: 100%;
+  width: 1160px;
   display: flex;
   justify-content: center;
-}
-
-.filters,
-.sorting {
-  background: #ebebeb;
+  position: relative;
 }
 
 .filters {
   display: flex;
   flex-direction: column;
   width: 470px;
+  background: #ebebeb;
+  flex-shrink: 0;
+  margin-top: -70px;
+  margin-left: -142px;
 }
 
 .filter-form {
@@ -1484,7 +1479,7 @@ a.social-button:active {
   width: 200px;
   border: none;
   color: #000000;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 0;
 }
 
@@ -1505,13 +1500,13 @@ main h2 {
 
 .catalog-filter {
   width: 100px;
-  margin-left: 200px;
-  margin-top: 25px;
+  margin-left: 204px;
+  margin-top: 23px;
   margin-bottom: 25px;
 }
 
 fieldset.filter:first-child {
-  margin-top: 0;
+  margin-top: 1px;
 }
 
 .filter legend {
@@ -1519,7 +1514,7 @@ fieldset.filter:first-child {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   position: relative;
 }
 
@@ -1529,7 +1524,7 @@ fieldset.filter:first-child {
   height: 2px;
   background: #000000;
   position: absolute;
-  top: -11px;
+  top: -12px;
 }
 
 .price-label {
@@ -1540,16 +1535,17 @@ fieldset.filter:first-child {
   text-align: center;
   color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 65px;
+  top: 71px;
+  left: 1px;
 }
 
 .max-price {
-  left: 75px;
+  left: 92px;
 }
 
 .range-filter {
-  width: 196px;
-  margin-top: 20px;
+  width: 200px;
+  margin-top: 18px;
   margin-bottom: 10px;
 }
 
@@ -1565,7 +1561,7 @@ fieldset.filter:first-child {
 }
 
 .range-controls .bar {
-  width: 110px;
+  width: 120px;
   height: 2px;
   background: #91c92f;
 }
@@ -1597,11 +1593,15 @@ input[type="range"]:focus + label,
 }
 
 .range-controls .toggle-min {
-  left: -5px;
+  left: -4px;
 }
 
 .range-controls .toggle-max {
-  left: 93px;
+  left: 109px;
+}
+
+.color-list {
+  margin-bottom: 13px;
 }
 
 .input-checkbox + label,
@@ -1634,7 +1634,7 @@ input[type="range"]:focus + label,
   background: url("../img/radio-off.svg") no-repeat 0 0;
   background-size: 25px;
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: 0;
 }
 
@@ -1694,47 +1694,51 @@ input[type="range"]:focus + label,
 
 .submit-button {
   width: 200px;
-  margin-top: 25px;
+  margin-top: 31px;
   border: none;
   cursor: pointer;
 }
 
 .items-column {
-  width: 974px;
-  display: flex;
-  flex-direction: column;
-}
-
-.sorting {
-  display: flex;
-  height: 70px;
-  margin-bottom: 50px;
   width: 760px;
   display: flex;
-  margin-left: 70px;
-  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 69px;
 }
 
 .sorting-wrap {
   width: 100%;
   background: #ebebeb;
   height: 70px;
-  position: absolute;
-  top: 452px;
-  left: 0;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+}
+
+.sorting {
+  height: 70px;
+  width: 757px;
+  display: flex;
+  align-items: center;
+  margin-left: 403px;
+  flex-shrink: 0;
 }
 
 .catalog-sort-by {
   display: flex;
-  margin-left: 50px;
+  margin-left: 52px;
   width: 300px;
   align-items: space-between;
+  padding-bottom: 3px;
 }
 
 .catalog-sort-by li {
-  margin-right: 20px;
-  margin-left: auto;
+  margin-left: 30px;
+}
+
+.catalog-sort-by li:first-child {
+  margin-left: 0;
 }
 
 .sorting-direction-section {
@@ -1742,6 +1746,7 @@ input[type="range"]:focus + label,
   margin-left: auto;
   width: 42px;
   justify-content: space-between;
+  padding-bottom: 3px;
 }
 
 .sort-by {
@@ -1795,7 +1800,6 @@ input[type="range"]:focus + label,
   display: flex;
   width: 760px;
   flex-wrap: wrap;
-  margin-left: 70px;
 }
 
 .catalog-list li {
@@ -1803,7 +1807,6 @@ input[type="range"]:focus + label,
   flex-direction: column;
   width: 360px;
   margin-right: 40px;
-  margin-top: 15px;
   position: relative;
 }
 
@@ -1837,7 +1840,7 @@ input[type="range"]:focus + label,
   align-items: baseline;
   justify-content: space-between;
   margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .catalog-item-title {
@@ -1847,6 +1850,7 @@ input[type="range"]:focus + label,
   letter-spacing: 0.18px;
   color: #000000;
   width: 260px;
+  margin-top: 12px;
 }
 
 .catalog-item-price {
@@ -1914,23 +1918,25 @@ input[type="range"]:focus + label,
   text-transform: uppercase;
   display: flex;
   width: 760px;
-  min-height: 70px;
-  margin-left: 70px;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 76px;
+  margin-top: -10px;
 }
 
 .page-numbers {
   display: flex;
+  padding-top: 2px;
 }
 
 .page-numbers li {
-  margin-right: 25px;
+  margin-left: 29px;
 }
 
-.page-numbers li:last-child {
-  margin-right: 0;
+.page-numbers li:first-child {
+  margin-left: 0;
+  padding-left: 6px;
 }
 
 .page-number a {
@@ -1954,8 +1960,8 @@ input[type="range"]:focus + label,
   text-align: center;
   margin-right: auto;
   width: 136px;
-  min-height: 70px;
-  padding: 25px;
+  height: 70px;
+  padding: 23px 28px 27px 22px;
   box-sizing: border-box;
 }
 
@@ -1963,8 +1969,8 @@ input[type="range"]:focus + label,
   text-align: center;
   margin-left: auto;
   width: 136px;
-  min-height: 70px;
-  padding: 25px;
+  height: 70px;
+  padding: 23px 22px 27px 28px;
   box-sizing: border-box;
 }
 
