@@ -31,7 +31,7 @@
 }
 
 body {
-  width: 100%;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Open Sans Light", "Arial", sans-serif;
@@ -228,7 +228,7 @@ li.delivery-link {
   line-height: 36px;
   color: #000000;
   width: 1100px;
-  height: 126px;
+  height: 123px;
   margin-bottom: 50px;
   font-family: "Open Sans Light", "Arial", sans-serif;
   font-size: 15px;
@@ -415,12 +415,8 @@ main h3 {
 
 .slider {
   position: relative;
-}
-
-.slider-wrap {
-  width: 1160px;
-  height: 112px;
-  background-color:  rgba(240, 197, 46, 0.5);
+  background: linear-gradient(rgba(240, 197, 46, 0.5), rgba(240, 197, 46, 0.5) 112px, transparent 112px, transparent);
+  margin-bottom: 92px;
 }
 
 .slide {
@@ -429,8 +425,6 @@ main h3 {
   min-height: 500px;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 90px;
-  margin-top: -110px;
   padding: 0;
 }
 
@@ -445,13 +439,16 @@ main h3 {
 
 .column img {
   align-self: center;
+  margin-left: 2px;
+  margin-top: 1px;
 }
 
 .slider-slogan {
   line-height: 56px;
   min-height: 100px;
   margin-bottom: 19px;
-  margin-top: 79px;
+  margin-top: 80px;
+  letter-spacing: 0.6px;
   z-index: 1;
 }
 
@@ -466,7 +463,7 @@ main h3 {
   height: 150px;
   order: -1;
   position: absolute;
-  top: -15px;
+  top: -13px;
   right: 45px;
 }
 
@@ -476,14 +473,14 @@ main h3 {
   height: 7px;
   background: #ffffff;
   position: absolute;
-  right: 416px;
+  right: 415px;
   top: 51px;
 }
 
 .slider-description {
   min-height: 60px;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 43px;
 }
 
 .slider-features {
@@ -520,7 +517,7 @@ main h3 {
 
 .slider-controls {
   position: absolute;
-  top: 326px;
+  top: 328px;
   right: 84px;
   z-index: 1;
   display: flex;
@@ -592,7 +589,7 @@ main h3 {
   letter-spacing: 3.6px;
   text-align: center;
   color: #000000;
-  padding: 8px 0;
+  padding: 8px 0 8px 3px;
   box-sizing: border-box;
 }
 
@@ -633,16 +630,34 @@ main h3 {
 
 .category-image {
   width: 160px;
-  height: 160px;
+  height: 161px;
   background-color: rgba(240, 197, 46, 0.5);
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .category-link:nth-child(2) .category-image {
   align-items: flex-end;
+  padding: 0 0 2px 2px;
+}
+
+.category-link:nth-child(3) .category-image {
+  padding: 4px 0 0 9px;
+}
+
+.category-link:nth-child(4) .category-image {
+  padding: 6px 0 0 4px;
+}
+
+.category-link:nth-child(5) .category-image {
+  padding: 4px 0 0 6px;
+}
+
+.category-link:nth-child(6) .category-image {
+  padding: 8px 2px 0 0;
 }
 
 .category-link h4 {
@@ -654,6 +669,11 @@ main h3 {
   margin: 0;
   margin-top: 33px;
 }
+
+.category-link:first-child h4 {
+  letter-spacing: 0.4px;
+}
+
 
 .category-link:active h4 {
   color: rgba(0, 0, 0, 0.3);
@@ -687,7 +707,7 @@ main h3 {
 
 .services-list {
   margin: 0;
-  width: 1054px;
+  width: 1060px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -711,7 +731,7 @@ main h3 {
   background: url("../img/delivery.svg") no-repeat;
   position: absolute;
   top: 82px;
-  left: 556px;
+  left: 557px;
 }
 
 .warranty::after {
@@ -775,7 +795,7 @@ main h3 {
 .service h3 {
   margin-bottom: 31px;
   margin-top: 70px;
-  letter-spacing: 0.47px;
+  letter-spacing: 1px;
 }
 
 .service-button:active {
@@ -787,7 +807,8 @@ main h3 {
 }
 
 .service-description {
-  font-family: "Open Sans Light", "Arial", sans-serif;
+  text-align: left;
+  letter-spacing: 0.29px;
 }
 
 .delivery-button:checked ~ .services-list .delivery {
@@ -837,6 +858,10 @@ main h3 {
   position: relative;
 }
 
+.logotypes:last-child {
+  padding-right: 1px;
+}
+
 .logotypes a::before {
   content: "";
   width: 260px;
@@ -865,7 +890,7 @@ main h3 {
   display: flex;
   width: 1160px;
   margin: 0;
-  margin-top: 137px;
+  margin-top: 136px;
   margin-bottom: 82px;
   justify-content: space-between;
 }
@@ -878,7 +903,7 @@ main h3 {
 }
 
 .about-us {
-  width: 475px;
+  width: 480px;
   margin-right: auto;
 }
 
@@ -899,12 +924,21 @@ main h3 {
 .info h3 {
   margin: 0;
   margin-bottom: 43px;
+  margin-left: -2px;
 }
 
 .info p {
   margin-bottom: 30px;
   font-family: "Open Sans Light", "Arial", sans-serif;
-  letter-spacing: normal;
+  letter-spacing: 0.1px;
+}
+
+.about-us p:nth-of-type(2) {
+  letter-spacing: -0.17px;
+}
+
+.contacts p {
+  margin-left: -1px;
 }
 
 .delivery-companies {
@@ -912,9 +946,9 @@ main h3 {
   font-size: 16px;
   line-height: 40px;
   color: #000000;
-  letter-spacing: normal;
+  letter-spacing: 0.1px;
   list-style: none;
-  padding-left: 35px;
+  padding-left: 36px;
   margin-top: 36px;
 }
 
@@ -932,8 +966,8 @@ main h3 {
   border-radius: 50%;
   box-sizing: border-box;
   position: absolute;
-  top: 15px;
-  left: -30px;
+  top: 16px;
+  left: -35px;
 }
 
 .info-button,
@@ -945,8 +979,8 @@ main h3 {
 .open-map {
   border: none;
   background: none;
-  margin-top: 10px;
-  margin-bottom: 68px;
+  margin-top: 9px;
+  margin-bottom: 69px;
   width: 560px;
   height: 222px;
   cursor: pointer;
@@ -1014,6 +1048,7 @@ footer button {
   justify-content: flex-end;
   min-height: 36px;
   margin-top: -5px;
+  margin-right: -1px;
 }
 
 .footer-user-options li {
@@ -1025,7 +1060,7 @@ footer button {
 
 .footer-user-options li:first-child {
   margin-left: 0;
-  padding-left: 26px;
+  padding-left: 25px;
 }
 
 .footer-user-options .logout-link {
@@ -1047,12 +1082,13 @@ footer button {
   background: url("../img/user-footer.svg") no-repeat 0 0;
   position: absolute;
   top: 12px;
-  left: 0;
+  left: -1px;
   opacity: 1;
 }
 
-.footer-compare-link {
+li.footer-compare-link {
   padding-left: 20px;
+  margin-left: 42px;
 }
 
 .footer-compare-link::before {
@@ -1133,9 +1169,9 @@ footer button {
 
 .footer-social {
   display: flex;
-  width: 160px;
-  justify-content: space-around;
-  margin-left: 500px;
+  width: 140px;
+  justify-content: space-between;
+  margin-left: 510px;
   margin-right: auto;
 }
 
@@ -1343,6 +1379,7 @@ a.social-button:active {
 
 .modal-contact-us input:invalid {
   background: #f6dada;
+  border-color: #f6dada;
 }
 
 .modal-map {
@@ -1400,6 +1437,7 @@ a.social-button:active {
   width: 1040px;
   margin-top: 36px;
   margin-bottom: 20px;
+  letter-spacing: 0.6px;
 }
 
 .breadcrumbs {
@@ -1487,7 +1525,7 @@ main h2 {
   font-family: "Gilroy Extra Bold", "Arial Black", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 3.2px;
+  letter-spacing: 3.6px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -1500,7 +1538,7 @@ main h2 {
 
 .catalog-filter {
   width: 100px;
-  margin-left: 204px;
+  margin-left: 203px;
   margin-top: 23px;
   margin-bottom: 25px;
 }
@@ -1513,8 +1551,9 @@ fieldset.filter:first-child {
   font-family: "Gilroy Extra Bold", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.18px;
+  letter-spacing: 0.3px;
   margin-bottom: 18px;
+  margin-top: 2px;
   position: relative;
 }
 
@@ -1721,20 +1760,20 @@ input[type="range"]:focus + label,
   width: 757px;
   display: flex;
   align-items: center;
-  margin-left: 403px;
+  margin-left: 400px;
   flex-shrink: 0;
 }
 
 .catalog-sort-by {
   display: flex;
-  margin-left: 52px;
+  margin-left: 50px;
   width: 300px;
   align-items: space-between;
   padding-bottom: 3px;
 }
 
 .catalog-sort-by li {
-  margin-left: 30px;
+  margin-left: 29px;
 }
 
 .catalog-sort-by li:first-child {
@@ -1744,6 +1783,7 @@ input[type="range"]:focus + label,
 .sorting-direction-section {
   display: flex;
   margin-left: auto;
+  margin-right: -2px;
   width: 42px;
   justify-content: space-between;
   padding-bottom: 3px;
@@ -1847,10 +1887,14 @@ input[type="range"]:focus + label,
   font-family: "Gilroy Extra Bold", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.18px;
+  letter-spacing: 0.27px;
   color: #000000;
   width: 260px;
   margin-top: 12px;
+}
+
+.catalog-item:nth-child(3) .catalog-item-title {
+  letter-spacing: 0.1px;
 }
 
 .catalog-item-price {
@@ -1922,21 +1966,21 @@ input[type="range"]:focus + label,
   align-items: center;
   justify-content: space-between;
   margin-bottom: 76px;
-  margin-top: -10px;
+  margin-top: -11px;
 }
 
 .page-numbers {
   display: flex;
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
 .page-numbers li {
-  margin-left: 29px;
+  margin-left: 28px;
 }
 
 .page-numbers li:first-child {
   margin-left: 0;
-  padding-left: 6px;
+  padding-left: 4px;
 }
 
 .page-number a {
@@ -1958,19 +2002,21 @@ input[type="range"]:focus + label,
 
 .go-back {
   text-align: center;
+  letter-spacing: 3.2px;
   margin-right: auto;
   width: 136px;
   height: 70px;
-  padding: 23px 28px 27px 22px;
+  padding: 24px 28px 27px 22px;
   box-sizing: border-box;
 }
 
 .go-forward {
   text-align: center;
+  letter-spacing: 3.6px;
   margin-left: auto;
   width: 136px;
   height: 70px;
-  padding: 23px 22px 27px 28px;
+  padding: 24px 22px 27px 28px;
   box-sizing: border-box;
 }
 
