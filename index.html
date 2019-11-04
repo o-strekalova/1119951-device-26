@@ -48,14 +48,9 @@
     <main class="container">
       <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
-        <input type="radio" name="choose-slide-1" id="show-slide-1" class="visually-hidden show-slide-1" checked>
-        <input type="radio" name="choose-slide-2" id="show-slide-2" class="visually-hidden show-slide-2">
-        <input type="radio" name="choose-slide-3" id="show-slide-3" class="visually-hidden show-slide-3">
-        <div class="slider-controls">
-          <label for="show-slide-1" aria-label="Показать первый слайд"></label>
-          <label for="show-slide-2" aria-label="Показать второй слайд"></label>
-          <label for="show-slide-3" aria-label="Показать третий слайд"></label>
-        </div>
+        <input type="radio" name="choose-slide" id="show-slide-1" class="visually-hidden show-slide-1" checked>
+        <input type="radio" name="choose-slide" id="show-slide-2" class="visually-hidden show-slide-2">
+        <input type="radio" name="choose-slide" id="show-slide-3" class="visually-hidden show-slide-3">
         <ul class="slider-list">
           <li class="slide slide-1" id="slide-1">
             <div class="column">
@@ -121,6 +116,11 @@
             </div>
           </li>
         </ul>
+        <div class="slider-controls">
+          <label for="show-slide-1" aria-label="Показать первый слайд"></label>
+          <label for="show-slide-2" aria-label="Показать второй слайд"></label>
+          <label for="show-slide-3" aria-label="Показать третий слайд"></label>
+        </div>
       </section>
 
       <section class="categories">
@@ -180,9 +180,9 @@
       <section class="services">
         <h2 class="visually-hidden">Сервисы</h2>
         <div class="service-wrap">
-          <input type="radio" name="choose-service-1" id="delivery" class="visually-hidden delivery-button" checked>
-          <input type="radio" name="choose-service-2" id="warranty" class="visually-hidden warranty-button">
-          <input type="radio" name="choose-service-3" id="credit" class="visually-hidden credit-button">
+          <input type="radio" name="choose-service" id="delivery" class="visually-hidden delivery-button" checked>
+          <input type="radio" name="choose-service" id="warranty" class="visually-hidden warranty-button">
+          <input type="radio" name="choose-service" id="credit" class="visually-hidden credit-button">
           <div class="service-controls">
             <label for="delivery" class="button service-button">Доставка</label>
             <label for="warranty" class="button service-button">Гарантия</label>
