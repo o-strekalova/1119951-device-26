@@ -176,6 +176,7 @@ ul.header-site-navigation {
   flex-wrap: wrap;
   margin-top: 29px;
   padding-bottom: 49px;
+  justify-content: flex-end;
 }
 
 .header-site-navigation li {
@@ -192,7 +193,7 @@ li.delivery-link {
   margin-left: 186px;
 }
 
-.header-site-navigation li:last-child {
+.header-site-navigation li:nth-child(4) {
   margin-right: -4px;
   margin-left: auto;
 }
@@ -214,49 +215,62 @@ li.delivery-link {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-ul.hidden-categories-list {
+.hidden-categories-wrap {
+  width: 1160px;
+  background: #f7e296;
   display: none;
-  flex-direction: column;
+  position: absolute;
+  left: -60px;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+ul.hidden-categories-list {
+  display: flex;
   flex-wrap: wrap;
   line-height: 36px;
   color: #000000;
-  width: 1100px;
-  height: 123px;
-  margin-bottom: 50px;
+  width: 550px;
+  min-height: 123px;
   font-family: "Open Sans Light", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
   letter-spacing: 0.15px;
   text-transform: none;
   align-content: flex-start;
-  position: absolute;
-  left: -60px;
-  background: #f7e296;
   padding-left: 60px;
-  padding-top: 38px;
-  z-index: 2;
+  padding-top: 20px;
+  padding-bottom: 18px;
 }
 
-.catalog-link:hover .hidden-categories-list,
-.plus-link:checked ~ .hidden-categories-list,
-.hidden-categories-list:hover {
-  display: flex;
+.catalog-link:hover .hidden-categories-wrap,
+.plus-link:checked ~ .hidden-categories-wrap,
+.hidden-categories-wrap:hover {
+  display: block;
 }
 
-.hidden-categories-list li {
+.hidden-categories-list li:first-child,
+.hidden-categories-list li:nth-child(3n+1) {
+  width: 181px;
   margin: 0;
+  margin-right: 58px;
 }
 
-.hidden-categories-list li:first-child {
+.hidden-categories-list li:nth-child(2),
+.hidden-categories-list li:nth-child(3n+2) {
+  width: 130px;
+  margin: 0;
   margin-right: 70px;
 }
 
-.hidden-categories-list li:nth-child(5) {
-  margin-bottom: 30px;
+.hidden-categories-list li:nth-child(3n) {
+  width: 111px;
+  margin: 0;
+  margin-right: auto;
 }
 
-.hidden-categories-list li:nth-child(6) {
-  margin-left: 70px;
+.hidden-categories-list li:last-child {
+  margin-left: 1px;
 }
 
 ul.header-user-options {
@@ -268,7 +282,7 @@ ul.header-user-options {
   margin-bottom: 0;
   display: flex;
   justify-content: flex-start;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .header-user-options li {
@@ -766,6 +780,7 @@ ul.services-list {
   align-items: flex-start;
   position: relative;
   top: -100px;
+  margin-bottom: -40px;
 }
 
 .delivery-button:focus ~ .service-controls label[for="delivery"] {
@@ -955,6 +970,7 @@ ul.delivery-companies {
   list-style: none;
   padding-left: 36px;
   margin-top: 36px;
+  margin-bottom: 20px;
 }
 
 .delivery-companies li {
@@ -996,7 +1012,7 @@ ul.delivery-companies {
   color: #ffffff;
   display: flex;
   width: 100%;
-  height: 323px;
+  min-height: 323px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1023,14 +1039,15 @@ ul.delivery-companies {
   min-height: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .footer-top-wrap {
   display: flex;
   width: 1160px;
-  height: 36px;
+  min-height: 36px;
   justify-content: space-between;
-  margin-top: 65px;
+  margin-top: 63px;
 }
 
 ul.footer-user-options {
@@ -1040,6 +1057,7 @@ ul.footer-user-options {
   min-height: 36px;
   margin-top: -5px;
   margin-right: -1px;
+  flex-wrap: wrap;
 }
 
 .footer-user-options li {
@@ -1111,11 +1129,10 @@ li.footer-compare-link {
 .footer-middle-wrap {
   display: flex;
   width: 1160px;
-  height: 30px;
+  min-height: 30px;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 29px;
-  margin-bottom: 63px;
+  margin-top: 23px;
+  margin-bottom: 61px;
 }
 
 .footer-middle-wrap a {
@@ -1128,9 +1145,7 @@ ul.footer-site-navigation {
   min-width: 428px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
-  margin-left: -35px;
-  padding: 0 20px;
+  padding-right: 70px;
 }
 
 .footer-site-navigation a {
@@ -1142,6 +1157,16 @@ ul.footer-site-navigation {
   color: #ffffff;
   text-transform: uppercase;
   padding: 0 16.5px;
+}
+
+p.footer-address {
+  margin-right: 55px;
+  flex-shrink: 0;
+}
+
+p.footer-phone-number {
+  margin-left: 20px;
+  flex-shrink: 0;
 }
 
 .footer-bottom-wrap {
